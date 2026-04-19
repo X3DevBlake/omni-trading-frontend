@@ -1,3 +1,4 @@
+import { TH } from "../theme";
 import React from "react";
 
 export const GlobalStyles = () => (

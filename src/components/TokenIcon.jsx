@@ -1,3 +1,4 @@
+import { TH } from "../theme";
 import React, { useState } from "react";
 import { INLINE_SVGS } from "../lib/svgIcons";
 
