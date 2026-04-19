@@ -148,8 +148,8 @@ export function FuturesView({ coins }) {
             disabled={submitting || !coin}
             onClick={async () => {
               setFlash(null);
-              if (!paper.available) {
-                setFlash({ type:"error", msg:"Paper trading unavailable." });
+              if (!paper.online) {
+                setFlash({ type:"error", msg:"Connect wallet to record paper trades." });
                 return;
               }
               const marginNum = parseFloat(margin);

@@ -1,3 +1,4 @@
+import { TH } from "../theme";
 import React from "react";
 
 export const GlobalStyles = () => (
@@ -40,9 +41,9 @@ export const GlobalStyles = () => (
     @keyframes arrowPop{0%{transform:translateY(0) scale(0.5);opacity:0}30%{transform:translateY(-6px) scale(1.3);opacity:1}100%{transform:translateY(-10px) scale(0.9);opacity:0}}
     @keyframes priceBounceUp{0%{transform:translateY(4px) scale(0.95);background:rgba(74,222,160,0.32)}40%{transform:translateY(-3px) scale(1.06)}100%{transform:translateY(0) scale(1);background:transparent}}
     @keyframes priceBounceDn{0%{transform:translateY(-4px) scale(0.95);background:rgba(255,106,133,0.32)}40%{transform:translateY(3px) scale(1.06)}100%{transform:translateY(0) scale(1);background:transparent}}
-    .live-price{padding:3px 10px;margin:-3px -10px;border-radius:6px;font-weight:700;position:relative;transition:background 0.3s ease,box-shadow 0.3s ease}
-    .live-price.flash-up{animation:priceBounceUp 1.2s cubic-bezier(0.2,0.8,0.2,1) both;background:linear-gradient(90deg,rgba(74,222,160,0.18),rgba(74,222,160,0.06));box-shadow:inset 0 0 0 1px rgba(74,222,160,0.35),0 0 20px rgba(74,222,160,0.25)}
-    .live-price.flash-down{animation:priceBounceDn 1.2s cubic-bezier(0.2,0.8,0.2,1) both;background:linear-gradient(90deg,rgba(255,106,133,0.18),rgba(255,106,133,0.06));box-shadow:inset 0 0 0 1px rgba(255,106,133,0.35),0 0 20px rgba(255,106,133,0.25)}
+    .live-price{padding:2px 8px;margin:-2px -8px;border-radius:6px;font-weight:700}
+    .live-price.flash-up{animation:priceBounceUp 1.1s cubic-bezier(0.2,0.8,0.2,1) both}
+    .live-price.flash-down{animation:priceBounceDn 1.1s cubic-bezier(0.2,0.8,0.2,1) both}
 
     /* ── Utility classes ────────────────────────────────────────── */
     .omni-title{font-family:${TH.display};font-weight:900;letter-spacing:0.22em;background:linear-gradient(90deg,${TH.cyan},${TH.magenta},${TH.gold},${TH.cyan});background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:gradShift 6s ease infinite}

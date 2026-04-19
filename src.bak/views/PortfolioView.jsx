@@ -49,7 +49,7 @@ export function PortfolioView({ coins, connected }) {
         </div>
 
         {/* Paper trading summary — only shown when backend is reachable */}
-        {paper.summary && (paper.summary.openCount > 0 || paper.summary.closedCount > 0) && (
+        {paper.online && paper.summary && (
           <div style={{
             marginTop:18, paddingTop:14, borderTop:`1px solid ${TH.border}`,
             display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(120px,1fr))", gap:12,
@@ -258,13 +258,13 @@ export function HistoryTab({ coins }) {
 /* ══════════ BUY CRYPTO VIEW ═══════════════════════════════════════════ */
 
 function PaperPositionsTab({ paper, coins }) {
-  if (!paper.positions || paper.positions.length === 0) {
+  if (!paper.online) {
     return (
       <div className="glass" style={{ padding:24, borderRadius:12, textAlign:"center" }}>
         <h3 style={{ marginTop:0, fontFamily:TH.display, letterSpacing:"0.15em" }}>PAPER POSITIONS</h3>
         <p style={{ color:TH.dim, fontSize:13, margin:"14px 0 0" }}>
-          No positions yet. Head to Spot or Futures to place your first paper trade.
-          Trades persist locally, and sync to your wallet-backed account when you sign in.
+          Connect your wallet to start a backend session. Paper trading persists across
+          devices and tracks PnL using realistic math — no real funds at risk.
         </p>
       </div>
     );

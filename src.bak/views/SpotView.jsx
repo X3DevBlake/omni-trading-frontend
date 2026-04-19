@@ -195,8 +195,8 @@ export function SpotView({ coins, selectedCoin, setSelectedCoin }) {
             disabled={submitting || !coin}
             onClick={async () => {
               setFlash(null);
-              if (!paper.available) {
-                setFlash({ type:"error", msg:"Paper trading unavailable." });
+              if (!paper.online) {
+                setFlash({ type:"error", msg:"Connect wallet to place paper orders." });
                 return;
               }
               const qty = parseFloat(amount);
