@@ -1,4 +1,4 @@
-import { Wallet, TrendingUp, Droplet, Sprout, Gauge, CreditCard, Trophy, BarChart3, Repeat, Coins, Lock } from "lucide-react";
+import { Wallet, TrendingUp, Droplet, Sprout, Gauge, CreditCard, Trophy, BarChart3, Repeat } from "lucide-react";
 
 export const NAV_ITEMS = [
   { id:"markets",     label:"Markets",    icon:BarChart3,   group:"trade" },
@@ -7,9 +7,7 @@ export const NAV_ITEMS = [
   { id:"futures",     label:"Futures",    icon:Gauge,       group:"trade" },
   { id:"liquidity",   label:"Liquidity",  icon:Droplet,     group:"earn"  },
   { id:"farms",       label:"Farms",      icon:Sprout,      group:"earn"  },
-  { id:"staking",     label:"Staking",    icon:Lock,        group:"earn"  },
   { id:"rewards",     label:"Rewards",    icon:Trophy,      group:"earn"  },
-  { id:"assets",      label:"Assets",     icon:Coins,       group:"account" },
   { id:"portfolio",   label:"Portfolio",  icon:Wallet,      group:"account" },
   { id:"buy",         label:"Buy Crypto", icon:CreditCard,  group:"account" },
 ];

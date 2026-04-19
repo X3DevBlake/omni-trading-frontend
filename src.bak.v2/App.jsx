@@ -11,14 +11,12 @@ import { useCoinGecko } from "./hooks/useCoinGecko";
 import { useLiveTicker } from "./hooks/useLiveTicker";
 import { useMergedCoins } from "./hooks/useMergedCoins";
 import { BuyCryptoView } from "./views/BuyCryptoView";
-import { AssetsView } from "./views/AssetsView";
 import { FarmsView } from "./views/FarmsView";
 import { FuturesView } from "./views/FuturesView";
 import { LandingPage } from "./views/LandingPage";
 import { LiquidityView } from "./views/LiquidityView";
 import { MarketsView } from "./views/MarketsView";
 import { PortfolioView } from "./views/PortfolioView";
-import { StakingView } from "./views/StakingView";
 import { RewardsView } from "./views/RewardsView";
 import { SpotView } from "./views/SpotView";
 import { SwapView } from "./views/SwapView";
@@ -137,8 +135,6 @@ export function App() {
                 {view === "liquidity" && <LiquidityView coins={coins} />}
                 {view === "farms" && <FarmsView coins={coins} />}
                 {view === "portfolio" && <PortfolioView coins={coins} connected={connected} />}
-                {view === "assets" && <AssetsView connected={connected} account={account} />}
-                {view === "staking" && <StakingView connected={connected} account={account} />}
                 {view === "buy" && <BuyCryptoView coins={coins} />}
                 {view === "rewards" && <RewardsView />}
               </div>
